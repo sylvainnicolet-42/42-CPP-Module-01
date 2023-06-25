@@ -12,3 +12,7 @@
 # EX02
 /ex02/objs/*.o
 /ex02/brain
+
+# EX03
+/ex03/objs/*.o
+/ex03/violence

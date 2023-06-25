@@ -3,4 +3,8 @@
 
 # EX00
 /ex00/objs/*.o
-/ex00/megaphone
+/ex00/zombie
+
+# EX01
+/ex01/objs/*.o
+/ex01/zombieHorde

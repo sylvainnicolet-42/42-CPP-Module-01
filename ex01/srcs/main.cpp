@@ -5,20 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: synicole <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/25 16:56:34 by synicole          #+#    #+#             */
-/*   Updated: 2023/06/25 16:56:35 by synicole         ###   ########.fr       */
+/*   Created: 2023/06/25 16:56:54 by synicole          #+#    #+#             */
+/*   Updated: 2023/06/25 16:56:59 by synicole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "Zombie.class.hpp"
 
 int main()
 {
+	// Parameters
+	int zombieNumber = 5;
+	std::string zombieName = "Yves";
 
-	Zombie::randomChump("Yves (stack)");
-	Zombie *zombieHeap = Zombie::newZombie("Jean (heap)");
-	zombieHeap->announce();
+	// Create a zombie horde
+	Zombie *zombieHorde = Zombie::zombieHorde(zombieNumber, zombieName);
 
-	delete zombieHeap;
+	// Announce the horde
+	for (int i = 0; i < zombieNumber; i++)
+		zombieHorde[i].announce();
+
+	// Delete the horde
+	delete[] zombieHorde;
+
 	return (0);
 }

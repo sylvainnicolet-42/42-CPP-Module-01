@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.class.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: synicole <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/25 16:56:34 by synicole          #+#    #+#             */
-/*   Updated: 2023/06/25 16:56:35 by synicole         ###   ########.fr       */
+/*   Created: 2023/06/25 15:28:59 by synicole          #+#    #+#             */
+/*   Updated: 2023/06/25 15:29:01 by synicole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.class.hpp"
+#ifndef ZOMBIE_CLASS_H
+# define ZOMBIE_CLASS_H
 
-int main()
-{
+#include <iostream>
+#include <string>
 
-	Zombie::randomChump("Yves (stack)");
-	Zombie *zombieHeap = Zombie::newZombie("Jean (heap)");
-	zombieHeap->announce();
+class Zombie {
+	public:
+		Zombie(void);
+		~Zombie(void);
 
-	delete zombieHeap;
-	return (0);
-}
+		void			announce(void) const;
+		static Zombie*	zombieHorde(int N, std::string name);
+		void			setName(std::string name);
+		std::string		getName(void) const;
+	private:
+		std::string	_name;
+};
+
+#endif

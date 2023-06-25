@@ -22,3 +22,20 @@ En général, il est recommandé d'utiliser la pile pour les objets avec une dur
 
 L'allocation de mémoire dynamique avec new permet de créer des objets dont la durée de vie peut être contrôlée plus précisément que les objets à durée de vie automatique (sur la pile). Cependant, il est important de libérer correctement cette mémoire avec l'opérateur delete une fois que vous avez fini d'utiliser les objets alloués dynamiquement.
 
+---
+
+## Static
+
+En C++, la spécification `static` peut être appliquée aux fonctions pour modifier leur comportement et leur portée. Voici les principales caractéristiques des fonctions statiques en C++ :
+
+1. Portée locale : Les fonctions statiques ont une portée limitée au fichier dans lequel elles sont déclarées. Elles ne sont pas visibles ou accessibles depuis d'autres fichiers source.
+
+2. Liage interne : Les fonctions statiques ont un liage interne, ce qui signifie qu'elles ne peuvent être référencées que dans le fichier source où elles sont déclarées. Cela permet de créer des fonctions "privées" qui ne sont pas exposées à d'autres parties du programme.
+
+3. Appel direct : Les fonctions statiques peuvent être appelées directement, sans avoir besoin d'instancier une classe ou un objet. Elles sont généralement utilisées pour encapsuler du code qui ne dépend pas de l'état d'un objet spécifique.
+
+4. Accès aux membres statiques : Les fonctions statiques peuvent accéder aux membres statiques de la classe, tels que les variables statiques ou les autres fonctions statiques de la même classe.
+
+5. Recursion limitée : Les fonctions statiques sont soumises à une limitation de récursion, car elles partagent le même espace mémoire pour leurs variables locales lorsqu'elles sont appelées de manière récursive.
+
+Les fonctions statiques sont utiles lorsque vous souhaitez encapsuler du code qui ne dépend pas d'un objet spécifique, et vous voulez limiter leur portée au fichier source actuel. Elles sont souvent utilisées dans les classes pour fournir des fonctions utilitaires ou des fonctions d'assistance qui ne nécessitent pas l'état d'un objet particulier.

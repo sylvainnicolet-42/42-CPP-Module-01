@@ -14,8 +14,11 @@
 
 int	main()
 {
+	// La string de référence
 	std::string	str = "HI THIS IS BRAIN";
+	// Un pointeur sur la string
 	std::string	*stringPTR = &str;
+	// Une référence sur la string
 	std::string	&stringREF = str;
 
 	std::cout << "--- ADDRESS ---" << std::endl;

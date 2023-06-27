@@ -14,7 +14,6 @@
 
 int main()
 {
-
 	Zombie::randomChump("Yves (stack)");
 	Zombie *zombieHeap = Zombie::newZombie("Jean (heap)");
 	zombieHeap->announce();

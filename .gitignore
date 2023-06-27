@@ -16,3 +16,7 @@
 # EX03
 /ex03/objs/*.o
 /ex03/violence
+
+# EX04
+/ex04/objs/*.o
+/ex04/sed

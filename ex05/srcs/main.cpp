@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.class.hpp                                   :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: synicole <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/25 18:03:49 by synicole          #+#    #+#             */
-/*   Updated: 2023/06/25 18:03:50 by synicole         ###   ########.fr       */
+/*   Created: 2023/06/28 08:57:33 by synicole          #+#    #+#             */
+/*   Updated: 2023/06/28 08:57:36 by synicole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Harl.hpp"
 
-#ifndef HUMANA_CLASS_H
-# define HUMANA_CLASS_H
+int	main(void)
+{
+	Harl	harl;
 
-#include <iostream>
-#include "Weapon.class.hpp"
-
-class HumanA {
-public:
-	HumanA(std::string name, Weapon &weapon);
-	~HumanA(void);
-
-	void		attack(void) const;
-private:
-	std::string	_name;
-	Weapon		&_weapon;
-};
-
-#endif
+	harl.complain("DEBUG");
+	harl.complain("INFO");
+	harl.complain("WARNING");
+	harl.complain("ERROR");
+	harl.complain("INVALID");
+	return (0);
+}

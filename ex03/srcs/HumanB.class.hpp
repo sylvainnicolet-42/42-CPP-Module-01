@@ -14,7 +14,6 @@
 # define HUMANB_CLASS_H
 
 #include <iostream>
-#include <string>
 #include "Weapon.class.hpp"
 
 class HumanB {

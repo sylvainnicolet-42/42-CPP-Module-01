@@ -14,7 +14,6 @@
 # define WEAPON_CLASS_H
 
 #include <iostream>
-#include <string>
 
 class Weapon {
 	public:

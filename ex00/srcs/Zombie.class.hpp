@@ -14,7 +14,6 @@
 # define ZOMBIE_CLASS_H
 
 #include <iostream>
-#include <string>
 
 class Zombie {
 	public:

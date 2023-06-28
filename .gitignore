@@ -20,3 +20,7 @@
 # EX04
 /ex04/objs/*.o
 /ex04/sed
+
+# EX05
+/ex05/objs/*.o
+/ex05/harl

@@ -17,8 +17,13 @@ Harl::Harl(void) { }
 Harl::~Harl(void) { }
 
 void Harl::complain(std::string level) const {
+	// Array of strings
 	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+
+	// Array of pointers to member functions
 	void (Harl::*f[4])(void) const = {&Harl::_debug, &Harl::_info, &Harl::_warning, &Harl::_error};
+
+	// Loop through array of strings and compare with level
 	for (int i = 0; i < 4; i++) {
 		if (levels[i] == level) {
 			(this->*f[i])();

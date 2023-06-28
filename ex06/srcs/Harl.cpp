@@ -23,12 +23,27 @@ void Harl::complain(std::string level) const {
 	// Array of pointers to member functions
 	void (Harl::*f[4])(void) const = {&Harl::_debug, &Harl::_info, &Harl::_warning, &Harl::_error};
 
-	// Loop through array of strings and compare with level
-	for (int i = 0; i < 4; i++) {
-		if (levels[i] == level) {
-			(this->*f[i])();
-			return ;
-		}
+	int i = 0;
+	while (i < 4)
+	{
+		if (levels[i] == level)
+			break ;
+		i++;
+	}
+
+	switch (i)
+	{
+		case DEBUG:
+			(this->*f[0])();
+		case INFO:
+			(this->*f[1])();
+		case WARNING:
+			(this->*f[2])();
+		case ERROR:
+			(this->*f[3])();
+			break ;
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}
 }
 

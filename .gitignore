@@ -24,3 +24,7 @@
 # EX05
 /ex05/objs/*.o
 /ex05/harl
+
+# EX06
+/ex06/objs/*.o
+/ex06/HarlFilter
